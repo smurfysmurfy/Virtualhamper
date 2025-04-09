@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Baby</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fdfaf6;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .hamper-box {
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      position: relative;
+      border: 2px solid #f0e8dc;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      background-color: #d8cfc4;
+      color: #333;
+      padding: 16px 24px;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 15px;
+      font-family: 'Poppins', sans-serif;
+      transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
+      min-width: 200px;
+    }
+
+    .btn:hover {
+      background-color: #cbbfad;
+    }
+
+    .note, .flowers, .hug, .letters {
+      background-color: #f5f1ec;
+      border: 1px solid #d8cfc4;
+      border-radius: 15px;
+      padding: 25px;
+      margin-top: 20px;
+      font-style: normal;
+      white-space: pre-wrap;
+      color: #333;
+      text-align: left;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hug img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #b89b82;
+    }
+
+    .envelope-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .envelope-btn {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      font-size: 24px;
+      background-color: #fff6ef;
+      border: 1px solid #cbbfad;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .letter-message {
+      display: none;
+      background-color: #fef9f4;
+      border: 1px solid #d8cfc4;
+      padding: 10px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 15px;
+      color: #333;
+    }
+  </style>
+  <script>
+    function showNote() {
+      document.getElementById('love-note').style.display = 'block';
+    }
+    function showFlowers() {
+      document.getElementById('flowers').style.display = 'block';
+    }
+    function showHug() {
+      document.getElementById('hug').style.display = 'block';
+    }
+    function showLetters() {
+      document.getElementById('letters').style.display = 'block';
+    }
+    function toggleLetter(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="hamper-box">
+      <h1>For my baby</h1>
+
+      <div class="grid">
+        <a class="btn" href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO1mWvp6?si=5semKUS4T2--MOVSb6mdYA" target="_blank">🎧 Playlist</a>
+        <a class="btn" href="https://open.spotify.com/track/7AsG1F1eMWd17RYan8M3Wm?si=6a9914989e054f32" target="_blank">💖 Our Song</a>
+        <button class="btn" onclick="showNote()">🥰 Love Note</button>
+        <button class="btn" onclick="showFlowers()">🌹 Flowers for You</button>
+        <button class="btn" onclick="showHug()">🤗 Virtual Hug</button>
+        <button class="btn" onclick="showLetters()">💌 Tiny Letters</button>
+      </div>
+
+      <div class="note" id="love-note" style="display: none;">
+heyy ganduu, ik distance is a big trouble for both of ur still clge jayenge so well be able to meet roz, i wish i met u on school very pehle so hum aur jaan paate, tho iloveyou sm u mean world to me will meet sosooonnnnnnnnn
+      </div>
+
+      <div class="flowers" id="flowers" style="display: none; font-size: 24px; text-align: center;">
+        🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹<br>
+        🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹<br>
+        🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹🌹
+      </div>
+
+      <div class="hug" id="hug" style="display: none; text-align: center;">
+        <img src="https://media.giphy.com/media/l2QDM9Jnim1YVILXa/giphy.gif" alt="Virtual Hug">
+        <p>Wrapped you in the tightest hug ever. Close your eyes and feel it. I’m with you. Always.</p>
+      </div>
+
+      <div class="letters" id="letters" style="display: none;">
+        <div class="envelope-grid">
+          <button class="envelope-btn" onclick="toggleLetter('l1')">📩</button>
+          <button class="envelope-btn" onclick="toggleLetter('l2')">📩</button>
+          <button class="envelope-btn" onclick="toggleLetter('l3')">📩</button>
+          <button class="envelope-btn" onclick="toggleLetter('l4')">📩</button>
+          <button class="envelope-btn" onclick="toggleLetter('l5')">📩</button>
+          <button class="envelope-btn" onclick="toggleLetter('l6')">📩</button>
+          <button class="envelope-btn" onclick="toggleLetter('l7')">📩</button>
+          <button class="envelope-btn" onclick="toggleLetter('l8')">📩</button>
+          <button class="envelope-btn" onclick="toggleLetter('l9')">📩</button>
+          <button class="envelope-btn" onclick="toggleLetter('l10')">📩</button>
+        </div>
+        <div class="letter-message" id="l1">Thinking of you rn 💭</div>
+        <div class="letter-message" id="l2">Drink water, silly 💧</div>
+        <div class="letter-message" id="l3">Come here for a kiss 😚</div>
+        <div class="letter-message" id="l4">I love you. Again. ❤️</div>
+        <div class="letter-message" id="l5">Miss you more than pizza 🍕</div>
+        <div class="letter-message" id="l6">Wish you were in my arms 🫂</div>
+        <div class="letter-message" id="l7">Can’t wait to see your face 🥺</div>
+        <div class="letter-message" id="l8">You’re my favorite human 💘</div>
+        <div class="letter-message" id="l9">Sending forehead kiss 🤕</div>
+        <div class="letter-message" id="l10">Soon, very soon 💌</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
